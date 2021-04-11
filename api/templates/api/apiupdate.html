@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Update</title>
+        <link rel="stylesheet" href="/css/style.css">
+    </head>
+    <body>
+
+            <form action="/updatedata/" method="POST">
+                {% csrf_token %}
+                <input name="id"   type="text" placeholder="ID" >
+                <input name="username"   type="text" placeholder="Email" >
+                <input name="password" type="password" placeholder="Password">
+                 <input name="fullname" type="text" placeholder="Fullname">
+                <div class="submit">
+                  <button type="submit" >Update</button>
+              </div>
+                </form>
+        
+                 <a href='/create'>Crate</a>
+
+    </body>
+</html>
