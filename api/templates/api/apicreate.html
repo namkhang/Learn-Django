@@ -3,15 +3,17 @@
     <head>
         <meta charset="UTF-8">
         <title>Sign in</title>
-        <link rel="stylesheet" href="/css/style.css">
+        <script src='/static/api/upload.js' defer></script>
     </head>
     <body>
 
-            <form action="/create/" method="POST">
+            <form action="/create/" method="POST" enctype="multipart/form-data">
                 {% csrf_token %}
                 <input name="username"   type="text" placeholder="Email" >
                 <input name="password" type="password" placeholder="Password">
                  <input name="fullname" type="text" placeholder="Fullname">
+                 <img id="image" width='170' height='170' src="" alt="hình ảnh"/>
+                 <input id="upload" onchange="change()" name="image" type="file" />
                 <div class="submit">
                   <input type="submit" value="Login">
               </div>
